@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import controllers.Ejercicios;
 import controllers.EmpleadoContoller;
 import controllers.Mapa;
@@ -8,10 +10,10 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // Ejecuta el ejemplo de uso de HashMap con ejemplos sencillos
-        runMapExamlpe();
+        //runMapExamlpe();
 
         // Ejecuta el ejemplo de gestión de empleados usando HashMap
-        runEmpleadoExample();
+        //runEmpleadoExample();
 
         // Ejecuta los ejercicios de sumatoria y anagramas
         runEjerccios();
@@ -49,7 +51,20 @@ public class App {
     }
 
     private static void runEjerccios() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        System.out.println("\nEjercicio 1: Verificación de Anagramas");
+        String str1 = "listen";
+        String str2 = "silent";
+        boolean resultadoAnagramas = Ejercicios.areAnagrams(str1, str2);
+        System.out.println("¿Son anagramas \"" + str1 + "\" y \"" + str2 + "\"? " + resultadoAnagramas);
+
+        System.out.println("\nEjercicio 2: Suma de dos números");
+        int[] nums = {9, 2, 3, 6};
+        int objetivo = 5;
+        Ejercicios ejercicios = new Ejercicios();
+        int[] resultadoSumatoria = ejercicios.sumatoriaDeDos(nums, objetivo);
+        System.out.println("Lista de números: " + Arrays.toString(nums));
+        System.out.println("Objetivo: " + objetivo);
+        System.out.println("Índices de los números que suman " + objetivo + ": " + Arrays.toString(resultadoSumatoria));
 
     }
 }
